@@ -32,9 +32,9 @@ export const SearchPage = () => {
       <h1>Search</h1>
       <hr />
 
-      <div className="row">
+      <div className="row ">
 
-        <div className="col-5">
+        <div className="col-12 col-md-5 g-3">
             <h4>Searching</h4>
             <hr />
             <form onSubmit={ onSearchSubmit } >
@@ -48,13 +48,13 @@ export const SearchPage = () => {
                 onChange={ onInputChange }
               />
 
-              <button className="btn btn-outline-primary mt-1">
+              <button className="btn btn-outline-primary mt-3">
                 Search
               </button>
             </form>
         </div>
 
-        <div className="col-7">
+        <div className="col-12 col-md-7 g-3">
           <h4>Results</h4>
           <hr />
 
