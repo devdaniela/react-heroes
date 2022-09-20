@@ -28,15 +28,14 @@ export const SearchPage = () => {
 
 
   return (
-    <>
+    <div className="row mt-3">
+
       <h1>Search</h1>
       <hr />
 
-      <div className="row ">
-
-        <div className="col-12 col-md-5 g-3">
-            <h4>Searching</h4>
-            <hr />
+        <div className="col-12 col-md-5 g-3 mb-5">
+            {/* <h4>Searching</h4>
+            <hr /> */}
             <form onSubmit={ onSearchSubmit } >
               <input
                 type="text"
@@ -54,7 +53,7 @@ export const SearchPage = () => {
             </form>
         </div>
 
-        <div className="col-12 col-md-7 g-3">
+        <div className="col-12 col-md-7">
           <h4>Results</h4>
           <hr />
 
@@ -85,7 +84,6 @@ export const SearchPage = () => {
 
         </div>
 
-      </div>
-    </>
+    </div>
   )
 }
