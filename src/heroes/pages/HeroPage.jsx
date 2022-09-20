@@ -14,6 +14,8 @@ export const HeroPage = () => {
     navigate(-1);
   }
 
+  const heroImageUrl = new URL(`../../assets/images/${ id }.jpg`, import.meta.url).href;
+
   if( !hero ) {
     return <Navigate to="/" />;
   }
@@ -22,7 +24,7 @@ export const HeroPage = () => {
     <div className="row mt-5">
       <div className="col-4">
         <img 
-          src={`/assets/heroes/${ id}.jpg`}
+          src={ heroImageUrl }
           alt={ hero.superhero }
           className="img-thumbnail animate__animated animate__fadeInLeft"
         />

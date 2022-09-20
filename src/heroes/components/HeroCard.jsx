@@ -14,7 +14,8 @@ export const HeroCard = ({
     characters 
 }) => {
 
-    const heroImageUrl = `/assets/heroes/${ id }.jpg`;
+    // const heroImageUrl = `/assets/heroes/${ id }.jpg`;
+    const heroImageUrl = new URL(`../../assets/images/${ id }.jpg`, import.meta.url).href;
 
     // const charactersByHero = (<p>{ characters }</p>);
 
