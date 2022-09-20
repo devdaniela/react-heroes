@@ -27,7 +27,7 @@ export const HeroCard = ({
                     <img src={ heroImageUrl } className='card-img' alt={ superhero } />
                 </div>
                 <div className="col-7">
-                    <h5 className="card-title">{ superhero }</h5>
+                    <h5 className="card-title mt-3">{ superhero }</h5>
                     <p className="card-text">{ alter_ego }</p>
 
                     {
