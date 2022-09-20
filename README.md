@@ -4,8 +4,10 @@
 Proyecto realizado en react creado con vite para mostrar y buscar los heroes de Marvel y DC.
 
 
-* <b><i>Instalaciones previamente realizadas:</i></b>
+* <b><i>Comandos utilizados:</i></b>
 ```cmd
+   yarn create vite
+   ...
    yarn add react-router-dom@6
    yarn add query-string
 ```
