@@ -25,7 +25,7 @@ export const NavBar = () => {
                 <Navbar.Brand as={ Link } to="/">HeroesApp</Navbar.Brand>
                 
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto d-block">
+                    <Nav>
                         <Nav.Link eventKey="1" as={ Link } to='/marvel' >Marvel</Nav.Link>
                         <Nav.Link eventKey="2" as={ Link } to='/dc' >DC</Nav.Link>
                         <Nav.Link eventKey="3" as={ Link } to='/search' >Search</Nav.Link>
@@ -35,7 +35,7 @@ export const NavBar = () => {
                 <Nav className='d-flex justify-content-end'>
                     <Navbar.Text>{ user?.name } </Navbar.Text>
                     <Nav.Link onClick={ onLogout }> 
-                        <i class="bi bi-box-arrow-right"></i> 
+                        <i className="bi bi-box-arrow-right"></i> 
                     </Nav.Link>
                 </Nav>
             </Container>
