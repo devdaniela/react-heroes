@@ -9,14 +9,15 @@ import { AuthContext } from '../../auth';
 export const NavBar = () => {
 
     const { user, logout } = useContext( AuthContext );
-    const navigate = useNavigate();
 
-    const onLogout = () => {
-        logout();
-        navigate('/login', {
-            replace: true
-        });
-    }
+    // const navigate = useNavigate();
+
+    // const onLogout = () => {
+    //     logout();
+    //     navigate('/login', {
+    //         replace: true
+    //     });
+    // }
 
     return (
         <Navbar collapseOnSelect sticky='top' expand='sm' bg='dark' variant='dark'>
@@ -25,15 +26,19 @@ export const NavBar = () => {
                 <Navbar.Brand href="/">HeroesApp</Navbar.Brand>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav>
-                        <Nav.Link href='/marvel' >Marvel</Nav.Link>
-                        <Nav.Link href='/dc' >DC</Nav.Link>
-                        <Nav.Link href='/search' >Search</Nav.Link>
+                        <Nav.Link href='marvel' >Marvel</Nav.Link>
+                        <Nav.Link href='dc' >DC</Nav.Link>
+                        <Nav.Link href='search' >Search</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
                 <Nav className='d-flex justify-content-end'>
-                    <Navbar.Text>{ user?.name }</Navbar.Text>
-                    <Nav.Link onClick={ onLogout }> Logout </Nav.Link>
+                    <Navbar.Text>
+                        { user?.name } 
+                        <a href="/login" onClick={ logout } className='p-2' >
+                            <i class="bi bi-box-arrow-right"></i>
+                        </a>
+                    </Navbar.Text>
                 </Nav>
             </Container>
         </Navbar>
