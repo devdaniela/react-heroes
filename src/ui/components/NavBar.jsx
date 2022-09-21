@@ -21,13 +21,14 @@ export const NavBar = () => {
     return (
         <Navbar collapseOnSelect sticky='top' expand='sm' bg='dark' variant='dark'>
             <Container>
-                <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Brand as={ Link } to="/">HeroesApp</Navbar.Brand>
-                <Navbar.Collapse id='responsive-navbar-nav'>
-                    <Nav>
-                        <Nav.Link as={ Link } to='/marvel' >Marvel</Nav.Link>
-                        <Nav.Link as={ Link } to='/dc' >DC</Nav.Link>
-                        <Nav.Link as={ Link } to='/search' >Search</Nav.Link>
+                
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto d-block">
+                        <Nav.Link eventKey="1" as={ Link } to='/marvel' >Marvel</Nav.Link>
+                        <Nav.Link eventKey="2" as={ Link } to='/dc' >DC</Nav.Link>
+                        <Nav.Link eventKey="3" as={ Link } to='/search' >Search</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
